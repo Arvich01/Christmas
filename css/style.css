@@ -1,0 +1,99 @@
+@font-face {
+    font-family:ofonts;
+    src: url(../font/snowcapcyr.otf);
+}
+@font-face {
+    font-family: o;
+    src: url(../font/park-of-victory-normal.ttf);
+}
+div{
+    box-sizing: border-box;
+}
+body{
+    background: #123;
+    
+}
+/*===================*/
+#stars{
+    width: 3px;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50%;
+    transform-origin:0 0 ;
+    transform: translateY(-50%);
+    border-radius: 50%;
+
+    animation: rotate 270s infinite linear;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/****************************************/
+.p{
+    text-align: center;
+    font-family: ofonts;
+    text-transform: uppercase;
+    font-size: 75px;
+    color: aquamarine;
+    animation: anim 5s infinite linear;
+}
+@keyframes anim {
+    0%{
+        color: rgb(255, 0, 0);
+    }
+    25%{
+        color: rgb(255, 145, 0);
+    }
+    50%{
+        color: yellow;
+    }
+    75%{
+ color: rgb(0, 17, 255);
+    }
+    100%{
+        color: blueviolet;
+    }
+}
+/***********************/
+#container{
+    border: 5px dotted #fff ;
+    width: 300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#container div{
+    width: 150px;
+
+}
+div img{
+     width: 140px;
+     height: 140px;
+     border-radius: 50%;
+     margin-bottom:10px ;
+     box-shadow: 0 0 35px #fff;
+     cursor: pointer;
+     transition: 0.5s;
+
+
+}
+div img:hover{
+    transform: scale(1.05,1.05);
+    transition: 0.5s;
+}
+#container div:first-child{
+    text-align: center;
+    font-family: o;
+    font-size: 33px;
+    animation: anim 5s linear infinite;
+}
